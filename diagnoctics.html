@@ -1,0 +1,144 @@
+<html>
+<head>
+	<style>
+		header {
+			background-color: blue;
+			padding: 2px;
+			text-align: center;
+			font-size: 35px;
+			color: black;
+		}
+		fieldset {
+			
+			padding: 30px;
+			border: 3px solid;
+			text-align:center;
+			border-color:black;
+		}
+		table{
+			width:900px;
+		}
+		
+		table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+		tr, th,td{
+			padding: 12px;
+			text-align: center;
+		}
+		.tab { 
+       display:inline-block; 
+       margin-left: 60px; 
+		}
+		.tab1 { 
+       display:inline-block;
+		align:left;
+		}
+	</style>
+
+</head>
+<body  style="background-color: powderblue;">
+
+	<header>
+		<h2>ABC Hospital Management System</h2>
+		<span class="tab1"></span>
+		<select name="patient" id="patient" style="height:50px;width:130px;background-color:blue;border:2px solid;">
+		<option value="" selected disabled hidden style="font-size:12px">Patient</option>
+		<option value="create" style="font-size:15px">Add Patient</option>
+		<option value="Update" style="font-size:15px">Update Patient</option>
+		<option value="Delete" style="font-size:15px">Delete Patient</option>
+		<option value="View" style="font-size:15px">View Patient</option>
+		<option value="discharge" style="font-size:15px">Discharge Patient</option>
+		<option value="billing" style="font-size:15px">Billing Details</option>
+		</select>
+		<span class="tab"></span>
+		<select name="pharmacy" id="pharmacy" style="height:50px;width:130px;background-color:blue;border:2px solid;">
+		<option value="" selected disabled hidden style="font-size:12px">Pharmacy</option>
+		<option value="manage" style="font-size:15px">Manage</option>
+		<option value="add" style="font-size:15px">Add Medicines</option>
+		<option value="edit" style="font-size:15px">Update Medicines</option>
+		</select>
+		<span class="tab"></span>
+		<select name="diagnostics" id="diagnostics" style="height:50px;width:130px;background-color:blue;border:2px solid;">
+		<option value="" style="font-size:12px" selected disabled hidden >Diagnostics</option>
+		<option value="diganoise" style="font-size:15px">View Reports</option>
+		<option value="new" style="font-size:15px">Update Reports</option>
+		</select>
+		<br/>
+		<br/>
+	</header>
+	<form>
+	<br><br><br><br>
+		<fieldset style="width: 70%; margin: 0px auto;">
+			
+			<h2>Diagnostics</h2>
+			<table style="margin: 0px auto;">
+			<tr style="background-color:#808080;color:white">
+			<th>Patient ID</th>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Address</th>
+			<th>DOJ</th>
+			<th>Type of Room</th>
+			</tr>
+			<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			</tr>
+			</table>
+		</fieldset>
+		
+
+	</form>
+	<form>
+	<br><br>
+		<fieldset style="width: 70%; margin: 0px auto;">
+			
+			<h2>Diagnostics Conducted</h2>
+			<table style="margin: 0px auto;">
+			<tr style="background-color:#808080;color:white">
+			<th>Name Of The Test</th>
+			<th>Amount</th>
+			</tr>
+			<tr>
+			<td></td>
+			<td></td>
+			</tr>
+			</table>
+			<br/>
+			<button type="button" style="background-color:black;font-size:15px;color:white;padding:10px;border-radius:5px">Add Diagnostics</button>
+		</fieldset>
+		
+
+	</form>
+	<form>
+	<br><br>
+		<fieldset style="width: 70%; margin: 0px auto;">
+			<table style="margin: 0px auto;">
+			<tr style="background-color:#808080;color:white">
+			<th>Name Of The Test</th>
+			<th>Amount</th>
+			</tr>
+			<tr>
+			<td></td>
+			<td></td>
+			</tr>
+			</table>
+			<br/>
+			<button type="button" style="background-color:black;font-size:15px;color:white;padding:10px;border-radius:5px">Add</button>
+			<span class="tab"></span>
+			<button type="button" style="background-color:black;font-size:15px;color:white;padding:10px;border-radius:5px">Update</button>
+			
+		</fieldset>
+		
+
+	</form>
+	
+</body>
+
+</html>

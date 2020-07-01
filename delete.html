@@ -1,0 +1,188 @@
+<html>
+<head>
+	<style>
+		header {
+			background-color: blue;
+			padding: 5px;
+			text-align: center;
+			font-size: 35px;
+			color: black;
+		}
+		table {
+			align:center;
+			padding: 15px;
+			width: 100%;
+		}
+		td {
+			height: 50px;
+		}
+		fieldset {
+			
+			padding: 5px;
+			border: 3px solid;
+			text-align:center;
+			border-color:black;
+		}
+		.tab { 
+			display:inline-block; 
+			margin-left: 60px; 
+		}
+		.tab2 { 
+			display:inline-block; 
+			margin-left: 5px; 
+		}
+		.tab1 { 
+			display:inline-block;
+			align:left;
+		}
+		button {
+			background-color: black;
+			color: white;
+			padding: 5px 13px;
+			border: none;
+			cursor: pointer;
+			border-radius: 12px;
+		}
+		.subm {
+			background-color: black;
+			color: white;
+			padding: 12px 28px;
+			border: none;
+			cursor: pointer;
+			border-radius: 12px;
+		}
+	</style>
+</head>
+<body style="background-color: powderblue;">
+
+	<header>
+		<h2>ABC Hospital Management System</h2>
+		<span class="tab1"></span>
+		<select name="patient" id="patient" style="height:50px;width:130px;background-color:blue;border:2px solid;">
+		<option value="" selected disabled hidden style="font-size:12px">Patient</option>
+		<option value="create" style="font-size:15px">Add Patient</option>
+		<option value="Update" style="font-size:15px">Update Patient</option>
+		<option value="Delete" style="font-size:15px">Delete Patient</option>
+		<option value="View" style="font-size:15px">View Patient</option>
+		<option value="discharge" style="font-size:15px">Discharge Patient</option>
+		<option value="billing" style="font-size:15px">Billing Details</option>
+		</select>
+		<span class="tab"></span>
+		<select name="pharmacy" id="pharmacy" style="height:50px;width:130px;background-color:blue;border:2px solid;">
+		<option value="" selected disabled hidden style="font-size:12px">Pharmacy</option>
+		<option value="manage" style="font-size:15px">Manage</option>
+		<option value="add" style="font-size:15px">Add Medicines</option>
+		<option value="edit" style="font-size:15px">Update Medicines</option>
+		</select>
+		<span class="tab"></span>
+		<select name="diagnostics" id="diagnostics" style="height:50px;width:130px;background-color:blue;border:2px solid;">
+		<option value="" style="font-size:12px" selected disabled hidden >Diagnostics</option>
+		<option value="diganoise" style="font-size:15px">View Reports</option>
+		<option value="new" style="font-size:15px">Update Reports</option>
+		</select>
+		<br/>
+		<br/>
+	</header>
+	<br><br>
+	
+	<fieldset style="width: 40%; margin: 0px auto;">
+	<h2 style="text-align: center">Delete Patient</h2>
+	<form onsubmit="myFunction()">
+	<table>
+	<tr>
+		<td>
+		<label for="patId"><b>Patient SSN ID *</b></label>
+		</td>
+		<td>
+		<input type="text" name="idPat" id="patientId" required>
+		<button name="get" type="button" value="Get" onclick="IDFunction()">Get</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<label for="patName"><b>Patient Name</b></label>
+		</td>
+		<td>
+		<input type="text" name="namePat" required>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<label for="patAge"><b>Patient Age</b></label>
+		</td>
+		<td>
+		<input type="number" name="agePat" required>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<label for="admDate"><b>Date Of Admission</b></label>
+		</td>
+		<td>
+		<input type="date" name="dateAdm" required>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<label for="bedType"><b>Type of Bed</b></label>
+		</td>
+		<td>
+		<select id="beds">
+		<option value="icu">ICU</option>
+		<option value="nicu">NICU</option>
+		<option value="privateroom">Private Room</option>
+		<option value="generalward">General Ward</option>
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<label for="patAddr"><b>Address</b></label>
+		</td>
+		<td>
+		<textarea rows="4" cols="25" required>
+		</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<label for="state"><b>State</b></label>
+		</td>
+		<td>
+		<select id="states">
+		<option value="punjab">Punjab</option>
+		<option value="haryana">Haryana</option>
+		<option value="tamilnadu">Tamil Nadu</option>
+		<option value="bihar">Bihar</option>
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<label for="city"><b>City</b></label>
+		</td>
+		<td>
+		<input type="text" name="city" required>
+		
+		</td>
+	</tr>
+	</table>
+	<p style="text-align:left;">&nbsp &nbsp &nbsp &nbsp * Mandatory</p>
+	<br>
+	
+	<input type="submit" class="subm" value="Delete" >
+	
+	</form>
+	</fieldset>
+	
+	<script>
+		function myFunction() {
+			alert("Patient deleted successfully");
+		}
+		
+		function IDFunction() {
+			document.getElementById("patientId").disabled = true;
+		}
+	</script>
+</body>
+</html>
